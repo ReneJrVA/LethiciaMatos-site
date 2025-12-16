@@ -2,12 +2,12 @@
 
 :exclamation: Houd deze repo 100% up-to-date :exclamation:
 
-| Student         | Info                                                             |
-|:----------------|:-----------------------------------------------------------------|
-| Name            | René Van Asch                                                    |
-| email           | r1089588@student.thomasmore.be                                   |
-| Github Username | ReneVanAsch                                                      |
-| Hosting         | project-thomasmore.netlify.app                                   |
+| Student         | Info                                   |
+|:----------------|:---------------------------------------|
+| Name            | René Van Asch                          |
+| email           | r1089588@student.thomasmore.be         |
+| Github Username | ReneVanAsch                            |
+| Hosting         | https://project-thomasmore.netlify.app |
 
 ## Gebruik
 
