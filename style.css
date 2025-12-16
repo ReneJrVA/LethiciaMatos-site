@@ -1,3 +1,5 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css');
+
 
 * {
     margin: 0;
@@ -23,6 +25,8 @@ h1 {
     color: #d3fafb;
     text-shadow: 3px 3px 3px rgba(0, 0, 0, .5);
 }
+
+
 
 main {
     width: 500px;
