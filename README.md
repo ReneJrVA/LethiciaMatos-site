@@ -4,10 +4,10 @@
 
 | Student         | Info                                                             |
 |:----------------|:-----------------------------------------------------------------|
-| Name            | ...                                                              |
-| email           | [john.doe@example.com](mailto:john.doe@example.com)              |
-| Github Username | ...                                                              |
-| Hosting         | [https://yourdomain.netlify.app](https://yourdomain.netlify.app) |
+| Name            | René Van Asch                                                    |
+| email           | r1089588@student.thomasmore.be                                   |
+| Github Username | ReneVanAsch                                                      |
+| Hosting         | project-thomasmore.netlify.app                                   |
 
 ## Gebruik
 
