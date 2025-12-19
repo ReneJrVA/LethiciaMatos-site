@@ -10,13 +10,15 @@
 html {
     font-size: 16px;
     height: 100vh;
-    background: linear-gradient(180deg, #d0e587 0%, #f2f8bd 100%);
+    /*background: linear-gradient(180deg, #d0e587 0%, #f2f8bd 100%);*/
     overflow: hidden;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
+    min-height: 100vh;
+
 }
 
 h1 {
@@ -27,16 +29,25 @@ h1 {
 }
 
 
-
 main {
     width: 500px;
     margin: 2rem auto;
     text-align: center;
 }
 
+.fa-bars{
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+}
+
 nav {
     margin-top: 2rem;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 
     ul {
         display: flex;
@@ -97,5 +108,26 @@ aside {
     10.5% {
         bottom: -150px;
         opacity: .2;
+    }
+}
+
+@media screen and (min-width: 0px) {
+    body {
+        background-color: red;
+    }
+
+}
+
+@media screen and (min-width: 700px) {
+    body {
+        background-color: blue;
+
+    }
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        background-color: green;
+
     }
 }
