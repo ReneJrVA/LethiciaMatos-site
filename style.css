@@ -21,6 +21,11 @@ body {
 
 }
 
+/*Checkbox verbergen*/
+#nav-toggle {
+    display: none;
+}
+
 h1 {
     margin: 2rem 0;
     letter-spacing: .1rem;
@@ -35,8 +40,11 @@ main {
     text-align: center;
 }
 
-.fa-bars{
-    position: fixed;
+/*Stijl voor hamburgermenu*/
+.nav-toggle-bars {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease; /*Draai effect voor icon */
     top: 1rem;
     left: 1rem;
 }
@@ -111,9 +119,35 @@ aside {
     }
 }
 
-@media screen and (min-width: 0px) {
+@media (max-width: 768px) {
     body {
         background-color: red;
+    }
+
+    .navbar {
+        position: fixed; /*Nav vastzetten*/
+        top: 0;
+        right: 0; /* Nav rechts zetten*/
+        width: 250px; /*Breedte v menu gedeelte*/
+        height: 100vh; /*Volledige hoogte*/
+        padding-top: 60px; /*Ruimte van de top*/
+
+        /*checkbox hack*/
+        transform: translateX(100%); /*Schuif het 100% naar rechts (buiten het beeld dus)*/
+        transition: transform 0.3s ease-in-out; /*Soepel laten schuiven*/
+        z-index: 998; /*Onder de header zetten*/
+    }
+
+    .navbar ul{
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    nav-;
+
+    a:hover {
+
     }
 
 }
@@ -122,6 +156,10 @@ aside {
     body {
         background-color: blue;
 
+    }
+
+    nav {
+        display: flex;
     }
 }
 
