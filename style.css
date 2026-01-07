@@ -14,16 +14,28 @@ html {
     overflow: hidden;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 20px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+#logo {
+    width: 50%;
+    height: auto;
+
+}
+
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
     min-height: 100vh;
 
-}
-
-/*Checkbox verbergen*/
-#nav-toggle {
-    display: none;
 }
 
 h1 {
@@ -35,58 +47,27 @@ h1 {
 
 
 main {
-    width: 500px;
-    margin: 2rem auto;
+    width: 100%;
+    margin: auto;
     text-align: center;
+}
+
+/*Checkbox verbergen*/
+#nav-toggle {
+    display: none;
 }
 
 /*Stijl voor hamburgermenu*/
 .nav-toggle-bars {
     font-size: 1.5rem;
+    color: #333;
     cursor: pointer;
     transition: transform 0.3s ease; /*Draai effect voor icon */
     top: 1rem;
     left: 1rem;
+    z-index: 1000;
 }
 
-nav {
-    margin-top: 2rem;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-    ul {
-        display: flex;
-        gap: 2rem;
-        list-style: none;
-    }
-
-    li {
-        flex: 1;
-        display: flex;
-        background-color: #0e7490;
-        padding: .5rem 1rem;
-        border-radius: .25rem;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
-        transition: .3s;
-
-        &:hover {
-            transform: translate(-1px, -1px);
-            background-color: #155e75;
-            box-shadow: 10px 10px 10px rgba(0, 0, 0, .3);
-        }
-    }
-
-    a {
-        flex: 1;
-        font-size: 1.5rem;
-        font-variant: small-caps;
-        text-decoration: none;
-        color: #d3fafb;
-    }
-}
 
 aside {
     width: 150px;
@@ -119,9 +100,14 @@ aside {
     }
 }
 
+/*  --- MOBIEL VERSIE ---   */
 @media (max-width: 768px) {
     body {
-        background-color: red;
+        background-color: #fff;
+    }
+
+    #logo-nav {
+        display: none;
     }
 
     .navbar {
@@ -130,6 +116,7 @@ aside {
         right: 0; /* Nav rechts zetten*/
         width: 250px; /*Breedte v menu gedeelte*/
         height: 100vh; /*Volledige hoogte*/
+        background: #a9a983;
         padding-top: 60px; /*Ruimte van de top*/
 
         /*checkbox hack*/
@@ -138,36 +125,170 @@ aside {
         z-index: 998; /*Onder de header zetten*/
     }
 
-    .navbar ul{
+    .navbar ul {
         list-style: none;
         padding: 0;
         text-align: center;
     }
 
-    nav li{
+    nav li {
+        margin: 20px 0;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.2rem;
 
     }
 
-    a:hover {
-
+    /*   -- Openen van het menu --  */
+    /*Als checkbox checked is => terug content schuiven naar links ( in beeld )*/
+    #nav-toggle:checked ~ .navbar {
+        transform: translateX(0);
     }
 
+    /*    --- Animatie voor icoon ---*/
+    /*    Als checkbox checked is => draai icoon 90 graden */
+    #nav-toggle:checked ~ .nav-toggle-bars {
+        transform: rotate(90deg);
+    }
 }
 
+
+/*      -----      TABLET VERSIE     -----      */
 @media screen and (min-width: 700px) {
     body {
-        background-color: blue;
+        background-color: #fff;
 
     }
 
-    nav {
-        display: flex;
+    #logo-nav {
+        display: none;
+    }
+
+    .navbar {
+        position: fixed; /*Nav vastzetten*/
+        top: 0;
+        right: 0; /* Nav rechts zetten*/
+        width: 250px; /*Breedte v menu gedeelte*/
+        height: 100vh; /*Volledige hoogte*/
+        background: #333;
+        padding-top: 60px; /*Ruimte van de top*/
+
+        /*checkbox hack*/
+        transform: translateX(100%); /*Schuif het 100% naar rechts (buiten het beeld dus)*/
+        transition: transform 0.3s ease-in-out; /*Soepel laten schuiven*/
+        z-index: 998; /*Onder de header zetten*/
+    }
+
+    .navbar ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    nav li {
+        margin: 20px 0;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.2rem;
+
+    }
+
+    /*   -- Openen van het menu --  */
+    /*Als checkbox checked is => terug content schuiven naar links ( in beeld )*/
+    #nav-toggle:checked ~ .navbar {
+        transform: translateX(0);
+    }
+
+    /*    --- Animatie voor icoon ---*/
+    /*    Als checkbox checked is => draai icoon 90 graden */
+    #nav-toggle:checked ~ .nav-toggle-bars {
+        transform: rotate(90deg);
     }
 }
+
 
 @media screen and (min-width: 900px) {
     body {
-        background-color: green;
+        background-color: #fff;
 
+    }
+
+    #logo {
+        display: none;
+    }
+
+    #logo-nav {
+        display: flex;
+        width: 100%;
+        height: auto;
+
+    }
+
+    /*Gewoon menu => hamburger icoon verbergen*/
+    .nav-toggle-bars {
+        display: none;
+    }
+
+    .navbar {
+        position: static;
+        transform: none;
+        height: auto;
+        width: auto;
+        padding: 0;
+        background: transparent;
+    }
+
+    .navbar ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    .navbar a {
+        color: #333;
+        font-size: 1rem;
+    }
+
+    nav {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        li {
+            flex: 1;
+            display: flex;
+            background-color: #fff;
+            padding: .5rem 1rem;
+            border-radius: .25rem;
+            /*box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);*/
+            transition: .3s;
+
+            &:hover {
+                transform: translate(-1px, -1px);
+                background-color: #a9a983;
+                box-shadow: 10px 10px 10px rgba(0, 0, 0, .3);
+            }
+        }
+
+        a {
+            flex: 1;
+            font-size: 1.5rem;
+            font-variant: small-caps;
+            text-decoration: none;
+            color: #d3fafb;
+        }
     }
 }
