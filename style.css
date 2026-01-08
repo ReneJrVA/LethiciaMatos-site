@@ -1,6 +1,6 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 * {
     margin: 0;
@@ -56,10 +56,14 @@ body {
 }
 
 h1 {
-    margin: 2rem 0;
+    text-align: left;
+    margin: 2rem 2rem;
     letter-spacing: .1rem;
-    color: #d3fafb;
-    text-shadow: 3px 3px 3px rgba(0, 0, 0, .5);
+    color: #000;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0);
+    font-weight: 800;
+    font-size:50px;
+    font-family: "Bebas Neue", sans-serif;
 }
 
 
