@@ -20,9 +20,8 @@ html {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px 20px 20px;
-    background-color: #fff;
+    /*background-color: #BFA893;*/
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: relative;
 }
 
 /*Checkbox verbergen*/
@@ -32,6 +31,7 @@ html {
 
 /*Stijl voor hamburgermenu*/
 .nav-toggle-bars {
+    position: fixed;
     font-size: 1.5rem;
     color: #000;
     cursor: pointer;
@@ -51,6 +51,7 @@ body {
     font-family: Montserrat, sans-serif;
     line-height: 1.5;
     min-height: 100vh;
+    /*background-color: #D9C5B4;*/
 
 }
 
@@ -58,6 +59,7 @@ main {
     width: 100%;
     margin: auto;
     text-align: center;
+    /*background-color: #D9C5B4;*/
 }
 
 
@@ -187,6 +189,10 @@ aside {
     }
 }
 
+footer{
+    background-color: #F2E8DF;
+}
+
 .footer-content {
     text-align: center;
 }
@@ -196,23 +202,19 @@ aside {
 }
 
 
-@media (max-width: 768px) {
-    /*  ---------------------------------     MOBIEL VERSIE      -------------------------------   */
-    body {
-        background-color: #fff;
-    }
+@media (max-width: 768px) { /*  ---------------------------------     MOBIEL VERSIE      -------------------------------   */
 
-    #logo-nav {
-        display: none;
+    body {
+        background-color: #D9C5B4;
     }
 
     .mobile-menu {
-        position: fixed; /*Nav vastzetten*/
+        position: fixed;
         top: 0;
         right: 0; /* Nav rechts zetten*/
         width: 250px; /*Breedte v menu gedeelte*/
         height: 100vh; /*Volledige hoogte*/
-        background: rgba(169, 169, 131, 0.97);
+        background: #A6907C;
         padding-top: 60px; /*Ruimte van de top*/
 
         /*checkbox hack*/
@@ -221,10 +223,23 @@ aside {
         z-index: 998; /*Onder de header zetten*/
     }
 
+    .nav-toggle-bars{
+        position: fixed;    /* Plakt hem vast aan het scherm */
+        z-index: 1000;      /* Zorgt dat hij ALTIJD bovenop foto's ligt */
+        cursor: pointer;
+        background-color: rgba(191, 168, 147, 0.4);
+        border-radius: 20%;
+    }
+
     .mobile-menu ul {
+        position: sticky;
         list-style: none;
         padding: 0;
         text-align: center;
+
+        & li:hover {
+            transform: translate(-1px, -1px);
+        }
 
     }
 
@@ -264,7 +279,7 @@ aside {
     .img_banner {
         width: 100%;
         height: 100%;
-        object-position: 25% 100%;
+        object-position: 0 100%;
 
     }
 
@@ -276,6 +291,9 @@ aside {
         width: 90%;
         max-width: 1200px;
         margin: 60px auto;
+        background-color: #BFA893;
+        border-radius: 1%;
+        height: 100%;
     }
 
     .intro-tekst-container {
@@ -294,17 +312,67 @@ aside {
 
     }
 
+    .insta-container{
+        padding-bottom: 2rem;
+        background-color: #A6907C;
+        border-radius: 0.3%;
+
+    }
+
     .insta-posts {
         width: 100%;
-        height: auto;
+        max-height: 100%;
         overflow: hidden;
+    }
 
+    .post1{
+        max-height: 664px;
+        overflow: hidden;
+        margin-bottom: 2rem;
+    }
+    .post2{
+        max-height: 664px;
+        overflow: hidden;
+        margin-bottom: 2rem;
+    }
+
+    .post3{
+        max-height: 664px;
+        overflow: hidden;
+        margin-bottom: 2rem;
+    }
+
+    .insta-posts h3{
+            padding-bottom: 3rem;
     }
 
     .instagram-media {
         width: 100%;
-        height: 665px;
+        max-height: 100%;
+        font-size: 1px;
     }
+}
+
+.socials {
+    /*margin: 20px 0;*/
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    a {
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #a9a983;
+        }
+    }
+
+
+
+
+
+
 }
 
 
@@ -389,7 +457,26 @@ aside {
     .intro-text {
         max-width: 90%;
     }
+    /*.post1{*/
+    /*    max-height: 735px;*/
+    /*    overflow: hidden;*/
+    /*    margin-bottom: 2rem;*/
+    /*}*/
+    /*.post2{*/
+    /*    max-height: 700px;*/
+    /*    overflow: hidden;*/
+    /*    margin-bottom: 2rem;*/
+    /*}*/
 
+    /*.post3{*/
+    /*    max-height: 664px;*/
+    /*    overflow: hidden;*/
+    /*    margin-bottom: 2rem;*/
+    /*}*/
+    
+    .car-3{
+        max-width: 600px;
+    }
 
 }
 
@@ -479,7 +566,12 @@ aside {
         width: 100%;
         height: 800px;
         overflow: hidden; /*Snijdt de randen van de ingezoomde foto af */
+    }
 
+    .img_banner{
+        height: 100%;
+        object-position: 100% 40%;
+        overflow: hidden;
     }
 
     .img-circle-leth {
@@ -510,6 +602,9 @@ aside {
         height: 605px;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
+
+
+
 
 
 }
