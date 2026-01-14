@@ -1,0 +1,88 @@
+body {
+    font-family: 'Prata', serif;
+    /* Zorg dat er geen witrandjes zijn */
+    background-color: #D9C5B4;
+}
+
+.flyer-container {
+    background: linear-gradient(to bottom, darkolivegreen 45%, #D9C5B4 45%);
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3rem;
+}
+
+/* --- LOGO --- */
+.logo-container {
+    width: 100%;
+    padding-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+#logo {
+    width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* --- FOTO --- */
+.img-container {
+    margin-top: 30px;
+    margin-bottom: 2rem;
+    z-index: 10;
+}
+
+.img-shoot {
+    aspect-ratio: 1/1;
+    width: 500px;      /* Grootte van de foto */
+    object-fit: cover;
+    object-position: 0 60%;
+    border-radius: 10px;
+
+
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    /*border: 4px solid #fff; */
+}
+
+/* --- TEKST (Onderste deel) --- */
+.tekst-sectie {
+    text-align: center;
+    color: darkolivegreen;
+    width: 90%;
+    height: 200px;
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: #736151;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.inhoud-kader {
+    border: 1px solid darkolivegreen;
+    border-radius: 15px;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.3); /* Beetje transparant wit erachter */
+}
+
+.inhoud-kader p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}

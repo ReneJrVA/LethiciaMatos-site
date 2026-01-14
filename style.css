@@ -47,6 +47,11 @@ main {
     object-fit: cover;
 }
 
+.img_banner-2 {
+    width: 100%;
+    object-fit: cover;
+}
+
 #intro {
     display: flex;
     align-items: center;
@@ -112,7 +117,7 @@ h1 {
 }
 
 .btn-portfolio:hover {
-    background-color: #a9a983;
+    background-color: #736151;
     transform: scale(1.05);
 }
 
@@ -187,26 +192,29 @@ h1 {
 .faq-blok {
     background-color: #A6907C;
     border-radius: 20px;
-    padding-top: 1rem;
+    width: 90%; /* Zorgt voor de witruimte links en rechts*/
+    max-width: 1200px; /* Zorgt dat hij niet te breed wordt op grote schermen */
+    margin: 60px auto;
+    padding: 2rem;
 
-    h2{
+    h2 {
         font-size: 2rem;
         margin-bottom: 2rem;
     }
 
-    p{
+    p {
         font-size: 0.9rem;
         margin-bottom: 5rem;
     }
 }
 
-.boek-sessie-blok{
-    margin: 2rem;
+.boek-sessie-blok {
+    margin: 4rem;
 
 
 }
 
-.btn-faq-blok{
+.btn-faq-blok {
     display: flex;
     justify-content: center;
 }
@@ -229,7 +237,7 @@ h1 {
 }
 
 .btn-faq:hover {
-    background-color: #a9a983;
+    background-color: #736151;
     transform: scale(1.05);
 }
 
@@ -256,9 +264,47 @@ footer {
         font-size: 1.5rem; /*social icons groter maken*/
 
         &:hover {
-            color: #a9a983;
+            color: #736151;
         }
     }
+
+    .img_banner-2 {
+        width: 100%;
+        height: 100%;
+        object-position: 46% 100%;
+        /*object-fit: cover;*/
+
+
+    }
+}
+
+/*     -----------------------------------------  CONTACT PAGINA      ------------------------------------------------*/
+
+.contact-blok {
+    border-radius: 20px;
+    width: 90%; /* Zorgt voor de witruimte links en rechts*/
+    max-width: 1800px; /* Zorgt dat hij niet te breed wordt op grote schermen */
+    margin: 60px auto;
+    padding: 2rem;
+
+    .form-contant-blok {
+        border: 2px white solid;
+        background-color: #736151;
+        height: 100%;
+    }
+
+
+}
+
+.form-contant-blok h2{
+    font-size: 1rem;
+}
+
+.blok-check{
+    background-color: #BFA893;
+    border-radius: 20px;
+    padding: 1rem;
+    margin-bottom: 1rem;
 }
 
 
@@ -321,8 +367,14 @@ footer {
 
     .mobile-menu a {
         text-decoration: none;
-        color: #fff;
+        color: #000000;
         font-size: 1.2rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #D9C5B4;
+
+        }
 
     }
 
@@ -370,8 +422,8 @@ footer {
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 
     }
-    /*     -------------------------------------------------------     OVER MIJ PAGINA      ------------------------------------------------*/
 
+    /*     -------------------------------------------------------     OVER MIJ PAGINA      ------------------------------------------------*/
     .img-circle-leth-about {
         max-width: 100%; /*Niet groter dan de container*/
         object-fit: cover;
@@ -385,33 +437,66 @@ footer {
     }
 
     video {
-        width: 100%;       /* Vul 100% van de ruimte van de kolom */
-        height: auto;      /* Behoud de juiste verhouding (niet uitrekken) */
-        display: block;    /* Voorkomt soms gekke witruimtes onder de video */
+        width: 100%; /* Vul 100% van de ruimte van de kolom */
+        height: auto; /* Behoud de juiste verhouding (niet uitrekken) */
+        display: block; /* Voorkomt soms gekke witruimtes onder de video */
         border-radius: 20px; /* Optioneel: past mooi bij de rest van je design */
     }
 
 
-
-
     /*     -------------------------------------------------------     FAQ PAGINA      ------------------------------------------------*/
-    .img_banner {
-        height: 100%;
-        object-position: 100% 70%;
-        overflow: hidden;
+    .banner-container-2 {
+        width: 100%;
+        height: 600px;
+        padding-bottom: 5rem;
     }
 
+    .img_banner-2 {
+        width: 100%;
+        height: 100%;
+        object-position: 46% 100%;
+    }
+
+    .btn-faq-blok {
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+    }
+
+    /*     -------------------------------- CONTACT PAGINA      ------------------------------------------------*/
+    .form-contant-blok {
+        background-color: #A6907C;
+        border-radius: 20px;
+        width: 90%; /* Zorgt voor de witruimte links en rechts*/
+        max-width: 1200px; /* Zorgt dat hij niet te breed wordt op grote schermen */
+        margin: 60px auto;
+        padding: 2rem;
+        justify-content: left;
 
 
+        .titel-form h1 {
+            font-size: 3rem;
+        }
 
+        .form-select, .form-check-input, .form-control {
+            background-color: #F2E8DF;
+            border-color: transparent;
+        }
 
+        #check-5 {
+            margin-bottom: 1rem;
+        }
 
+        #bericht {
+            margin-top: 1rem;
+        }
+    }
 
 
 }
 
-@media (min-width: 1100px) { /*      ------------------------------      PC VERSIE    --------------------------------      */
-
+@media (min-width: 1100px) {
+    /*      ------------------------------      PC VERSIE    --------------------------------      */
     body {
         background-color: #D9C5B4;
     }
@@ -429,11 +514,6 @@ footer {
         margin-left: 1rem;
         max-height: 50%;
         max-width: 280px;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-            color: #a9a983;
-        }
     }
 
     /*Checkbox verbergen*/
@@ -484,7 +564,8 @@ footer {
             transition: color 0.3s ease;
 
             &:hover {
-                color: #a9a983;
+                color: #a65924;
+                font-size: 1.3rem;
             }
         }
     }
@@ -537,7 +618,6 @@ footer {
 
 
     /*     -------------------------------------------------------     OVER MIJ PAGINA      ------------------------------------------------*/
-
     .img-circle-leth-about {
         max-width: 100%; /*Niet groter dan de container*/
         object-fit: cover;
@@ -550,19 +630,62 @@ footer {
         /*margin-top: 6rem;*/
     }
 
-    .img-aboutme-blok{
+    .img-aboutme-blok {
         display: flex;
         justify-content: center;
     }
 
     video {
-        width: 100%;       /* Vul 100% van de ruimte van de kolom */
-        height: 800px;      /* Behoud de juiste verhouding (niet uitrekken) */
-        display: block;    /* Voorkomt soms gekke witruimtes onder de video */
+        width: 100%; /* Vul 100% van de ruimte van de kolom */
+        height: 800px; /* Behoud de juiste verhouding (niet uitrekken) */
+        display: block; /* Voorkomt soms gekke witruimtes onder de video */
         border-radius: 20px; /* Optioneel: past mooi bij de rest van je design */
     }
 
+    /*     -------------------------------------------------------     FAQ PAGINA      ------------------------------------------------*/
+    .banner-container-2 {
+        width: 100%;
+        height: 800px;
+        padding-bottom: 7rem;
 
+    }
+
+    .img_banner-2 {
+        width: 100%;
+        height: 100%;
+        object-position: 100% 35%;
+        object-fit: cover;
+
+    }
+
+    /*     -------------------------------- CONTACT PAGINA      ------------------------------------------------*/
+    .form-contant-blok {
+        background-color: #A6907C;
+        border-radius: 20px;
+        width: 90%; /* Zorgt voor de witruimte links en rechts*/
+        max-width: 1200px; /* Zorgt dat hij niet te breed wordt op grote schermen */
+        margin: 60px auto;
+        padding: 2rem;
+
+
+        .titel-form h1 {
+            font-size: 3rem;
+        }
+
+        .form-select, .form-check-input, .form-control {
+            background-color: #F2E8DF;
+            border-color: transparent;
+        }
+
+
+        #check-5 {
+            margin-bottom: 1rem;
+        }
+
+        #bericht {
+            margin-top: 1rem;
+        }
+    }
 
 
 

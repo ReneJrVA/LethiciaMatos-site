@@ -27,9 +27,9 @@
         <nav class="mobile-menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="flyer/index.html" target="subsite">Flyer</a></li>
+                <!--                <li><a href="flyer/index.html" target="subsite">Flyer</a></li>-->
                 <li><a href="over-mij.html">Over mij</a></li>
-                <li><a href="index.html">Gallerij</a></li>
+                <li><a href="gallerij.html">Gallerij</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="contact.html">Contact</a></li>
 
@@ -39,29 +39,91 @@
     </div>
 
     <div id="banner">
-        <div class="banner-container"><img src="afbeeldingen/aboutme/banner.jpg" alt="picture of couple"
-                                           class="img_banner">
+        <div class="banner-container-2"><img src="afbeeldingen/aboutme/banner.jpg" alt="picture of couple"
+                                             class="img_banner-2">
         </div>
     </div>
 
 
-    <form>
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-        </div>
-        <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    <div>
+        <form class="form-contant-blok">
+            <div class="titel-form">
+                <h1>Contacteer mij</h1>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"><h2>Jouw naam*</h2></label>
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Geef je naam"
+                       aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"><h2>E-mail adres*</h2></label>
+                <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Geef je mailadres">
+            </div>
+            <div class="blok-check">
+                <h2>In welke shoot heb je interesse?</h2>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Trouw</label>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                    <label class="form-check-label" for="exampleCheck1">Maternity</label>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck3">
+                    <label class="form-check-label" for="exampleCheck1">Maternity outdoor</label>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck4">
+                    <label class="form-check-label" for="exampleCheck1">Family</label>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck5">
+                    <label class="form-check-label" id="check-5" for="exampleCheck1">Portrait</label>
+                </div>
+            </div>
+            <label for="exampleInputEmail1" class="form-label"><h2>Hoe ben je bij mij terechtgekomen?*</h2></label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Kies een antwoord</option>
+                <option value="1">Instagram</option>
+                <option value="2">Google</option>
+                <option value="3">Reclame</option>
+                <option value="4">Van een vriend</option>
+                <option value="5">Anderen</option>
+
+
+            </select>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" id="bericht" class="form-label"><h2>Bericht*</h2></label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Geef je bericht in"
+                          rows="3"></textarea>
+            </div>
+
+            <div class="btn-faq-blok">
+                <button type="submit" class="btn-faq">Verzenden</button>
+            </div>
+        </form>
+    </div>
+
+
 </main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-socials container">
+            <div class="row">
+                <div class="github-logo col"><a href="https://github.com/ReneJrVA" target="subsite"><i
+                        class="fa-brands fa-github"></i></a></div>
+                <div class="insta-logo col"><a href="https://www.instagram.com/rene.jr.va/" target="subsite"><i
+                        class="fa-brands fa-instagram"></i></a></div>
+                <div class="mail-logo col"><a href="mailto:r1089588@student.thomasmore.be" target="subsite"><i
+                        class="fa-solid fa-envelope"></i></a></div>
+            </div>
+        </div>
+        <p>&copy; 2026 Lethicia Matos | Photography <br> Alle rechten voorbehouden.</p>
+
+    </div>
+</footer>
 
 </body>
 </html>
