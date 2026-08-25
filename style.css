@@ -119,6 +119,7 @@ h1 {
 .btn-portfolio:hover {
     background-color: #736151;
     transform: scale(1.05);
+    color: white;
 }
 
 .insta-container {
@@ -200,12 +201,19 @@ h1 {
     h2 {
         font-size: 2rem;
         margin-bottom: 2rem;
+        color: #3d2610;
     }
 
     p {
         font-size: 0.9rem;
         margin-bottom: 5rem;
+        color: #3d2610;
     }
+
+    h1{
+        color: #3d2610;
+    }
+
 }
 
 .boek-sessie-blok {
@@ -239,6 +247,7 @@ h1 {
 .btn-faq:hover {
     background-color: #736151;
     transform: scale(1.05);
+    color: white;
 }
 
 
@@ -300,11 +309,20 @@ footer {
     font-size: 1rem;
 }
 
+
 .blok-check{
     background-color: #BFA893;
     border-radius: 20px;
     padding: 1rem;
     margin-bottom: 1rem;
+}
+
+.blok-check .form-check-input:checked {
+    background-color: white; /* Maakt het vakje zelf wit */
+    border-color: #736151; /* Geeft het vakje een bruin randje, passend bij je thema */
+
+    /* Hier zit de magie: dezelfde Bootstrap SVG, maar we hebben stroke='white' veranderd naar stroke='black' */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
 }
 
 
@@ -568,6 +586,11 @@ footer {
                 font-size: 1.3rem;
             }
         }
+        #talen-menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     .banner-container {
@@ -579,7 +602,7 @@ footer {
 
     .img_banner {
         height: 100%;
-        object-position: 100% 40%;
+        object-position: 100% 50%;
         overflow: hidden;
     }
 
@@ -690,4 +713,25 @@ footer {
 
 
 
+}
+
+
+nav ul li.talen-switch {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Bepaalt de afstand tussen NL, het streepje en EN */
+    flex: 0 1 auto; /* Zorgt dat de knop niet onnodig breed uitrekt op pc */
+}
+
+nav ul li.talen-switch a {
+    flex: 0 1 auto; /* Voorkomt uittrekken van de klikbare tekst */
+    padding: 0; /* Haalt de standaard witruimte rond de letters weg */
+}
+
+.streepje {
+    font-size: 1.4rem;
+    color: #000; /* Kleur van het streepje */
+    user-select: none; /* Zorgt dat de bezoeker het streepje niet per ongeluk kan selecteren */
 }
