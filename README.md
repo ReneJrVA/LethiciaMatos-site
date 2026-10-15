@@ -1,10 +1,10 @@
 # Lethicia Matos | Photography Site
 
 
-| Student         | Info                                   |
-|:----------------|:---------------------------------------|
-| Name            | René Van Asch                          |
-| Hosting         | https://project-thomasmore.netlify.app |
+| Student         | Info                                         |
+|:----------------|:---------------------------------------------|
+| Name            | René Van Asch                                |
+| Hosting         | https://lethiciamatosphotography.netlify.app |
 
 ## Info
 
