@@ -67,6 +67,20 @@ main {
     height: 100%;
 }
 
+#intro-kerst {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 0 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto;
+    background-color: #BFA893;
+    border-radius: 20px;
+    height: 100%;
+}
+
+
 h1 {
     text-align: left;
     margin-bottom: 20px;
@@ -436,7 +450,7 @@ footer {
     }
 
     h1 {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     .img_banner {
