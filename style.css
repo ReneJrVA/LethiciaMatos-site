@@ -796,20 +796,29 @@ nav ul li.talen-switch {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 10px; /* Bepaalt de afstand tussen NL, het streepje en EN */
-    flex: 0 1 auto; /* Zorgt dat de knop niet onnodig breed uitrekt op pc */
+    gap: 8px; /* Afstand iets verkleind voor een strakker resultaat */
+    flex: 0 1 auto;
 }
 
+/* Verklein de linkjes (NL, EN, PT) in het taalmenu */
 nav ul li.talen-switch a {
-    flex: 0 1 auto; /* Voorkomt uittrekken van de klikbare tekst */
-    padding: 0; /* Haalt de standaard witruimte rond de letters weg */
+    flex: 0 1 auto;
+    padding: 0;
+    font-size: 1.1rem !important; /* Pas dit getal (bijv. 0.9rem of 1.1rem) aan naar wens */
 }
 
-.streepje {
-    font-size: 1.4rem;
-    color: #000; /* Kleur van het streepje */
-    user-select: none; /* Zorgt dat de bezoeker het streepje niet per ongeluk kan selecteren */
+/* Laat de hover effect iets kleiner meeschalen */
+nav ul li.talen-switch a:hover {
+    font-size: 1.2rem !important;
 }
+
+/* Verklein het streepje, zodat het past bij de kleinere letters */
+.streepje {
+    font-size: 1rem; /* Zelfde grootte als de linkjes */
+    color: #000;
+    user-select: none;
+}
+
 
 /*     -------------------------------------------------------     KERSTMIS PAGINA      ------------------------------------------------*/
 
